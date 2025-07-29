@@ -138,17 +138,6 @@ return {
   end,
 },
 
--- lspconfig
-    {
-      'neovim/nvim-lspconfig',
-      dependencies = {
-        'williamboman/mason.nvim', -- Recommended for managing LSP servers
-        'williamboman/mason-lspconfig.nvim',
-      },
-      config = function()
-        require('lspconfig').clangd.setup {}
-      end
-    },
 {
     'nvim-telescope/telescope.nvim', tag = '0.1.8',
 -- or                              , branch = '0.1.x',
@@ -172,6 +161,13 @@ return {
       },
     })
   end,
+},
+	{
+		"neoclide/coc.nvim"
+	},
+{
+    'nvim-lualine/lualine.nvim',
+    dependencies = { 'nvim-tree/nvim-web-devicons' }
 }
 }
   
